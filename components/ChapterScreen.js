@@ -15,6 +15,7 @@ const ChapterScreen = ({ route, navigation }) => {
     setChapters(uniqueChapters);
   }, []);
 
+  
   return (
     <SafeAreaView>
       <Text style={styles.bookTitle}>{book}</Text>
@@ -24,7 +25,7 @@ const ChapterScreen = ({ route, navigation }) => {
         // ItemSeparatorComponent={ItemSeparator}
         ListEmptyComponent={ListEmpty}
         renderItem={({ item, index }) => (
-          <TouchableOpacity onPress={() => navigation.navigate('Verse', { chapter: item ,  book: book})} style={styles.container}>
+          <TouchableOpacity onPress={() => navigation.navigate('Verse', { chapter: item, book: book })} style={styles.container}>
             <Text style={styles.bookChapter}> {item}</Text>
           </TouchableOpacity>
         )}
@@ -56,7 +57,7 @@ const styles = StyleSheet.create({
     padding: 4,
     textAlign: 'center',
     backgroundColor: 'rgba(243, 243, 243, 0.5)',
-}
+  }
 
 });
 export default ChapterScreen;

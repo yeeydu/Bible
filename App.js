@@ -14,7 +14,6 @@ export default function App() {
   const Stack = createStackNavigator();
 
   return (
-
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Book">
         <Stack.Screen name="King James Version Bible" component={HomeScreen}  />
@@ -23,13 +22,8 @@ export default function App() {
         <Stack.Screen name="Verse" component={VerseScreen} />
       </Stack.Navigator>
     </NavigationContainer>
-
-
-
-
   );
 }
-
 
 const styles = StyleSheet.create({
   container: {

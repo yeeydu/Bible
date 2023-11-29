@@ -12,7 +12,6 @@ const VerseScreen = ({ route }) => {
     const [verses, setVerses] = useState([]);
     const [itemSeparator, setItemSeparator] = useState(false);
 
-
     useEffect(() => {
         const chapterVerses = kjv.filter(item => item.book_name === book && item.chapter === chapter);
         setVerses(chapterVerses);
@@ -25,30 +24,30 @@ const VerseScreen = ({ route }) => {
     return (
         <SafeAreaView>
             <Text style={styles.bookTitle} selectable> {book} {chapter}</Text>
-                    <View style={styles.container}>
-                        {Platform.OS === 'ios' ? (
-                            // iOS requires a textinput for word selections
-                            <TextInput
-                                selectable
-                                //value={item.verse + '. ' + item.text}
-                                value={versesText}
-                                editable={false}
-                                multiline
-                                style={styles.bookVerse}
-                            />
-                        ) : (
-                            // Android can do word selections just with <Text>
-                            <FlatList
-                            data={verses}
-                            keyExtractor={(item, index) => index.toString()}
-                            renderItem={({ item }) => (
-                              <Text selectable style={styles.bookVerse}>
+            <View style={styles.container}>
+                {Platform.OS === 'ios' ? (
+                    // iOS requires a textinput for word selections
+                    <TextInput
+                        selectable
+                        //value={item.verse + '. ' + item.text}
+                        value={versesText}
+                        editable={false}
+                        multiline
+                        style={styles.bookVerse}
+                    />
+                ) : (
+                    // Android can do word selections just with <Text>
+                    <FlatList
+                        data={verses}
+                        keyExtractor={(item, index) => index.toString()}
+                        renderItem={({ item }) => (
+                            <Text selectable style={styles.bookVerse}>
                                 {item.verse}. {item.text}
-                              </Text>
-                            )}
-                          />
+                            </Text>
                         )}
-                    </View>
+                    />
+                )}
+            </View>
         </SafeAreaView>
     );
 };

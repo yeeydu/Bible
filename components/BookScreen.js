@@ -25,7 +25,7 @@ export default function BookScreen({ navigation }) {
                 ListEmptyComponent={ListEmpty}
                 ItemSeparatorComponent={ItemSeparator}
                 renderItem={({ item, index }) => (
-                     <TouchableOpacity onPress={() => navigation.navigate('Chapter', {  chapter: item ,  book: item })} style={styles.container}>                    
+                    <TouchableOpacity onPress={() => navigation.navigate('Chapter', { chapter: item, book: item })} style={styles.container}>
                         <Text style={styles.bookTitle}>{item}</Text>
                     </TouchableOpacity>
                 )}

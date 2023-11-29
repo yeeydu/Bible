@@ -20,7 +20,6 @@ export default function HomeScreen({ navigation }) {
     }, []);
 
 
-
     return (
         <SafeAreaView style={styles.container}>
             <StatusBar style="auto" />
@@ -47,5 +46,5 @@ const styles = StyleSheet.create({
         borderColor: '#ddd',
         borderRadius: 8,
         textAlign: 'center',
-      },
+    },
 });
