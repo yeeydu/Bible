@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     margin: 5,
-    // height: 50, // Adjust the height as needed
+    // height: 50,
   },
   bookChapter: {
     fontSize: 26,

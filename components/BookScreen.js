@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useState, useEffect } from 'react';
-import { FlatList, StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import { FlatList, StyleSheet, Text, View, TouchableOpacity , Image} from 'react-native';
 import ListEmpty from './ListEmpy';
 import ItemSeparator from './ItemSeparator';
 import kjv from '../data/kjv.json';
@@ -41,10 +41,11 @@ const styles = StyleSheet.create({
         paddingRight: 10,
         paddingTop: 10,
         backgroundColor: '#fff',
+        // backgroundColor: 'rgba(255, 255, 255, 1)',
     },
     bookTitle: {
         fontSize: 22,
         padding: 4,
-    }
+    },   
 
 });
