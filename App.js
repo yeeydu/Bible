@@ -16,10 +16,23 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Book">
-        <Stack.Screen name="King James Version Bible" component={HomeScreen}  />
-        <Stack.Screen name="Books" component={BookScreen} />
-        <Stack.Screen name="Chapter" component={ChapterScreen} />
-        <Stack.Screen name="Verse" component={VerseScreen} />
+        <Stack.Screen
+          name="King James Version Bible"
+          component={HomeScreen} />
+        <Stack.Screen
+          name="Books"
+          component={BookScreen}
+        />
+        <Stack.Screen
+          name="Chapter"
+          component={ChapterScreen}
+          options={({ route }) => ({ title: `${route.params.book} ` })}
+        />
+        <Stack.Screen
+          name="Verse"
+          component={VerseScreen}
+          options={({ route }) => ({ title: `${route.params.book} ${route.params.chapter}` })}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );

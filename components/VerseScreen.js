@@ -23,7 +23,7 @@ const VerseScreen = ({ route }) => {
 
     return (
         <SafeAreaView>
-            <Text style={styles.bookTitle} selectable> {book} {chapter}</Text>
+            <Text style={styles.bookTitle}>{book} {chapter} </Text>
             <View style={styles.container}>
                 {Platform.OS === 'ios' ? (
                     // iOS requires a textinput for word selections
@@ -56,19 +56,19 @@ const VerseScreen = ({ route }) => {
 const styles = StyleSheet.create({
     container: {
         padding: 8,
+        paddingTop: 0,
+        paddingBottom: 0,
         backgroundColor: '#fff',
-        paddingBottom: 30,
-        marginBottom: 4,
     },
     bookVerse: {
         fontSize: 16,
         padding: 2,
     },
     bookTitle: {
-        fontSize: 20,
-        padding: 1,
+        fontSize: 0,
+        padding: 0,
         textAlign: 'center',
-        backgroundColor: 'rgba(243, 243, 243, 0.2)',
+        color: 'rgba(000, 000, 000, 0.0)',
     }
 
 });
