@@ -27,7 +27,7 @@ export default function HomeScreen({ navigation }) {
             <Text
                 onPress={() => navigation.navigate('Books', { book: books })}
                 style={styles.bookVersion}>
-                KJV - King James Version Bible
+                [EN] KJV - King James Version Bible
             </Text>
 
         </SafeAreaView>

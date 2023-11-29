@@ -7,7 +7,6 @@ import ItemSeparator from './ItemSeparator';
 
 const ChapterScreen = ({ route, navigation }) => {
   const { book } = route.params;
-  // console.log('Book:', book);
   const [chapters, setChapters] = useState([]);
 
   useEffect(() => {
