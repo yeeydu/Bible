@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
         textAlign: 'center',
     },
     backgroundImage: {
-        opacity: 0.9,
+        opacity: 0.93,
         justifyContent: 'center',
         resizeMode: 'cover',
         width: '100%',
@@ -65,7 +65,7 @@ const styles = StyleSheet.create({
         alignSelf: "center",
         padding: 8,
         width: 330,
-        borderColor: '#cccddd',
+        borderColor: '#CCFFCC',
         borderWidth: 1,
         borderRadius: 16,
         backgroundColor: 'rgba(222, 222, 222, 0.3)',
