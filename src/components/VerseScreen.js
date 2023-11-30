@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { SafeAreaView, Text, TextInput, StatusBar, FlatList, StyleSheet, View, Share, Clipboard, Platform } from 'react-native';
-import kjv from '../data/kjv.json';
+import kjv from '../../data/kjv.json';
 import ListEmpty from './ListEmpy';
 import ItemSeparator from './ItemSeparator';
 import { SelectableText } from "@alentoma/react-native-selectable-text";

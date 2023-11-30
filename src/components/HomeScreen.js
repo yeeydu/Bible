@@ -1,9 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import { FlatList, Image, ImageBackground, StyleSheet, Text, View } from 'react-native';
-import ListEmpty from './ListEmpy';
-import ItemSeparator from './ItemSeparator';
-import BookScreen from './BookScreen';
-import kjv from '../data/kjv.json';
+import kjv from '../../data/kjv.json';
 import { SafeAreaView } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
@@ -22,21 +19,23 @@ export default function HomeScreen({ navigation }) {
 
 
     return (
-             <SafeAreaView style={styles.container}>
-                <Image 
-                    source={require("../assets/images/kj.jpg")}
-                    style={styles.backgroundImage}
-                />
-                <StatusBar style="auto" />
-                <TouchableOpacity
-                    onPress={() => navigation.navigate('Books', { book: books })}
-                    style={styles.button}>
-                        <Text style={styles.bookVersion}>
-
+        <SafeAreaView style={styles.container}>
+            <Image
+                source={require("../images/kj.jpg")}
+                style={styles.backgroundImage}
+            />
+            <StatusBar style="auto" />
+            <TouchableOpacity
+                onPress={() => navigation.navigate('Books', { book: books })}
+                style={styles.button}>
+                <Text style={styles.bookVersion}>
                     KJV - King James Version Bible
-                        </Text>
-                </TouchableOpacity>
-            </SafeAreaView>
+                </Text>
+            </TouchableOpacity>
+                <Text style={styles.about} onPress={()=> navigation.navigate('About')}>
+                    About
+                </Text>
+        </SafeAreaView>
     );
 };
 
@@ -50,11 +49,11 @@ const styles = StyleSheet.create({
         fontSize: 16,
         padding: 8,
         color: '#fff',
+        justifyContent: 'center',
         fontWeight: 'bold',
         textAlign: 'center',
     },
     backgroundImage: {
-        flex: 1,
         opacity: 0.9,
         justifyContent: 'center',
         resizeMode: 'cover',
@@ -71,6 +70,12 @@ const styles = StyleSheet.create({
         borderRadius: 16,
         backgroundColor: 'rgba(222, 222, 222, 0.3)',
         margin: 6,
-         
-      },
+    },
+    about: {
+        fontSize: 14,
+        paddingTop: 8,
+        color: '#fff',
+        textAlign: 'center',
+        justifyContent: 'flex-end',
+    },
 });

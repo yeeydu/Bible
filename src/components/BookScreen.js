@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { FlatList, StyleSheet, Text, View, TouchableOpacity , Image} from 'react-native';
 import ListEmpty from './ListEmpy';
 import ItemSeparator from './ItemSeparator';
-import kjv from '../data/kjv.json';
+import kjv from '../../data/kjv.json';
 import { SafeAreaView } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';

@@ -4,10 +4,11 @@ import kjv from './data/kjv.json';
 import { SafeAreaView } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import HomeScreen from './components/HomeScreen';
-import BookScreen from './components/BookScreen';
-import ChapterScreen from './components/ChapterScreen';
-import VerseScreen from './components/VerseScreen';
+import HomeScreen from './src/components/HomeScreen';
+import BookScreen from './src/components/BookScreen';
+import ChapterScreen from './src/components/ChapterScreen';
+import VerseScreen from './src/components/VerseScreen';
+import AboutScreen from './src/components/AboutScreen';
 
 export default function App() {
 
@@ -19,6 +20,9 @@ export default function App() {
         <Stack.Screen
           name="King James Version Bible"
           component={HomeScreen} />
+        <Stack.Screen
+          name="About"
+          component={AboutScreen} />
         <Stack.Screen
           name="Books"
           component={BookScreen}

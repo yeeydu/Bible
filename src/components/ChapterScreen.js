@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { SafeAreaView, Text, StatusBar, FlatList, TouchableOpacity, StyleSheet } from 'react-native';
-import kjv from '../data/kjv.json';
+import kjv from '../../data/kjv.json';
 import { useNavigation } from "@react-navigation/native";
 import ListEmpty from './ListEmpy';
 import ItemSeparator from './ItemSeparator';
