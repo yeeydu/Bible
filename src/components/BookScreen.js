@@ -40,7 +40,6 @@ const styles = StyleSheet.create({
         paddingLeft: 10,
         paddingRight: 10,
         paddingTop: 10,
-        backgroundColor: '#fff',
         // backgroundColor: 'rgba(255, 255, 255, 1)',
     },
     bookTitle: {

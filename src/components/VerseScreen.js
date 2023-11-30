@@ -3,7 +3,8 @@ import { SafeAreaView, Text, TextInput, StatusBar, FlatList, StyleSheet, View, S
 import kjv from '../../data/kjv.json';
 import ListEmpty from './ListEmpy';
 import ItemSeparator from './ItemSeparator';
-import { SelectableText } from "@alentoma/react-native-selectable-text";
+import SelectableText from '@alentoma/react-native-selectable-text';
+
 
 
 const VerseScreen = ({ route }) => {
@@ -38,14 +39,18 @@ const VerseScreen = ({ route }) => {
                 ) : (
                     // Android can do word selections just with <Text>
                     <FlatList
-                        data={verses}
-                        keyExtractor={(item, index) => index.toString()}
-                        renderItem={({ item }) => (
-                            <Text selectable style={styles.bookVerse}>
-                                {item.verse}. {item.text}
-                            </Text>
-                        )}
-                    />
+                    data={verses}
+                    keyExtractor={(item, index) => index.toString()}
+                    renderItem={({ item }) => (
+                        <Text
+                            selectable
+                            selectionColor='blue'
+                            style={styles.bookVerse}
+                        >
+                            {item.verse}. {item.text}
+                        </Text>
+                    )}
+                />
                 )}
             </View>
         </SafeAreaView>
@@ -58,7 +63,6 @@ const styles = StyleSheet.create({
         padding: 8,
         paddingTop: 0,
         paddingBottom: 0,
-        backgroundColor: '#fff',
     },
     bookVerse: {
         fontSize: 16,

@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
   },
   bookChapter: {
     fontSize: 26,
-    backgroundColor: '#f3f3f3',
+   // backgroundColor: '#f3f3f3',
     padding: 8,
     borderWidth: 1,
     borderColor: '#ddd',
@@ -56,7 +56,7 @@ const styles = StyleSheet.create({
     fontSize: 20,
     padding: 4,
     textAlign: 'center',
-    backgroundColor: 'rgba(243, 243, 243, 0.5)',
+  //  backgroundColor: 'rgba(243, 243, 243, 0.5)',
   }
 
 });
