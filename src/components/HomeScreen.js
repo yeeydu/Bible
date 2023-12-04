@@ -21,7 +21,6 @@ export default function HomeScreen({ navigation }) {
         setBooks(allBooks);
     }, []);
 
-//backgroundColor: darkMode ? theme.dark : DefaultTheme, color: darkMode? theme.dark : DefaultTheme
     return (
         <SafeAreaView style={[styles.container, {color:theme.color}, {backgroundColor:theme.backgroundColor}]}>
             {/* <Image
