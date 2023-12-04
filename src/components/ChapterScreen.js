@@ -1,13 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { SafeAreaView, Text, StatusBar, FlatList, TouchableOpacity, StyleSheet } from 'react-native';
 import kjv from '../../data/kjv.json';
 import { useNavigation } from "@react-navigation/native";
 import ListEmpty from './ListEmpy';
 import ItemSeparator from './ItemSeparator';
+import ThemeContext from '../theme/themeContext';
 
 const ChapterScreen = ({ route, navigation }) => {
   const { book } = route.params;
   const [chapters, setChapters] = useState([]);
+  const theme = useContext(ThemeContext);
 
   useEffect(() => {
     const bookChapters = kjv.filter(item => item.book_name === book);
@@ -15,7 +17,7 @@ const ChapterScreen = ({ route, navigation }) => {
     setChapters(uniqueChapters);
   }, []);
 
-  
+
   return (
     <SafeAreaView>
       {/* <Text style={styles.bookTitle}>{book}</Text> */}
@@ -25,8 +27,10 @@ const ChapterScreen = ({ route, navigation }) => {
         // ItemSeparatorComponent={ItemSeparator}
         ListEmptyComponent={ListEmpty}
         renderItem={({ item, index }) => (
-          <TouchableOpacity onPress={() => navigation.navigate('Verse', { chapter: item, book: book })} style={styles.container}>
-            <Text style={styles.bookChapter}> {item}</Text>
+          <TouchableOpacity
+            onPress={() => navigation.navigate('Verse', { chapter: item, book: book })}
+            style={[styles.container]}>
+            <Text style={[styles.bookChapter, {color:theme.color}]}> {item}</Text>
           </TouchableOpacity>
         )}
         keyExtractor={(item, index) => index.toString()}
@@ -46,7 +50,7 @@ const styles = StyleSheet.create({
   },
   bookChapter: {
     fontSize: 26,
-   // backgroundColor: '#f3f3f3',
+    // backgroundColor: '#f3f3f3',
     padding: 8,
     borderWidth: 1,
     borderColor: '#ddd',
@@ -56,7 +60,7 @@ const styles = StyleSheet.create({
     fontSize: 20,
     padding: 4,
     textAlign: 'center',
-  //  backgroundColor: 'rgba(243, 243, 243, 0.5)',
+    //  backgroundColor: 'rgba(243, 243, 243, 0.5)',
   }
 
 });

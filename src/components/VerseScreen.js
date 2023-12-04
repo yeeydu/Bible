@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { SafeAreaView, Text, TextInput, StatusBar, FlatList, StyleSheet, View, Share, Clipboard, Platform } from 'react-native';
 import kjv from '../../data/kjv.json';
 import ListEmpty from './ListEmpy';
 import ItemSeparator from './ItemSeparator';
 import SelectableText from '@alentoma/react-native-selectable-text';
-
+import ThemeContext from '../theme/themeContext';
 
 
 const VerseScreen = ({ route }) => {
@@ -12,6 +12,7 @@ const VerseScreen = ({ route }) => {
 
     const [verses, setVerses] = useState([]);
     const [itemSeparator, setItemSeparator] = useState(false);
+    const theme = useContext(ThemeContext);
 
     useEffect(() => {
         const chapterVerses = kjv.filter(item => item.book_name === book && item.chapter === chapter);
@@ -45,7 +46,7 @@ const VerseScreen = ({ route }) => {
                         <Text
                             selectable
                             selectionColor='blue'
-                            style={styles.bookVerse}
+                            style={[styles.bookVerse, {color:theme.color}]}
                         >
                             {item.verse}. {item.text}
                         </Text>
