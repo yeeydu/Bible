@@ -1,7 +1,8 @@
-import { View, Text, StyleSheet, Linking } from 'react-native'
+import { View, Text, StyleSheet, Linking, TouchableOpacity } from 'react-native'
 import React, { useContext } from 'react'
 import ItemSeparator from './ItemSeparator';
 import ThemeContext from '../theme/themeContext';
+import { Image } from 'react-native';
 
 export default function AboutScreen() {
 
@@ -28,10 +29,19 @@ export default function AboutScreen() {
       </Text>
       <Text style={[styles.subColaborate, styles.link,]} onPress={() => Linking.openURL('https://buymeacoffee.com/extramedia19')}>
         👉 By a Coffee
-      </Text>
-      <Text style={[styles.subColaborate, styles.link,]} onPress={() => Linking.openURL('https://www.paypal.com/donate/?hosted_button_id=T9T42YNB9QJ2A')}>
-        👉 DONATE
-      </Text>
+      </Text >
+      <TouchableOpacity onPress={() => Linking.openURL('https://www.paypal.com/donate/?hosted_button_id=T9T42YNB9QJ2A')}>
+        <Text style={[styles.subColaborate, styles.link,]}>
+          👉 Donate
+        </Text>
+        <Image
+          source={require("../images/donates.png")}
+          style={styles.donateImage}
+        />
+      </TouchableOpacity>
+      {/* <Text style={[styles.subColaborate, styles.link,]} onPress={() => Linking.openURL('https://www.paypal.com/donate/?hosted_button_id=T9T42YNB9QJ2A')}>
+        👉Donate
+      </Text> */}
       <ItemSeparator />
     </View>
   )
@@ -64,5 +74,10 @@ const styles = StyleSheet.create({
   link: {
     color: '#0096FF',
     textDecorationLine: 'underline',
+  },
+  donateImage: {
+    alignSelf: "center",
+    resizeMode: 'contain',
+    width: 150,
   },
 });
