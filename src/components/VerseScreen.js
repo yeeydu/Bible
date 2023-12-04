@@ -35,7 +35,7 @@ const VerseScreen = ({ route }) => {
                         value={versesText}
                         editable={false}
                         multiline
-                        style={styles.bookVerse}
+                        style={[styles.bookVerse, {color:theme.color}]}
                     />
                 ) : (
                     // Android can do word selections just with <Text>
