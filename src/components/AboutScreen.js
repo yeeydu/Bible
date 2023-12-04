@@ -29,7 +29,7 @@ export default function AboutScreen() {
       <Text style={[styles.subColaborate, styles.link,]} onPress={() => Linking.openURL('https://buymeacoffee.com/extramedia19')}>
         👉 By a Coffee
       </Text>
-      <Text style={[styles.subColaborate, styles.link,]} onPress={() => Linking.openURL('https://buymeacoffee.com/extramedia19')}>
+      <Text style={[styles.subColaborate, styles.link,]} onPress={() => Linking.openURL('https://www.paypal.com/donate/?hosted_button_id=T9T42YNB9QJ2A')}>
         👉 DONATE
       </Text>
       <ItemSeparator />
