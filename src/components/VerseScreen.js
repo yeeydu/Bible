@@ -35,23 +35,26 @@ const VerseScreen = ({ route }) => {
                         value={versesText}
                         editable={false}
                         multiline
-                        style={[styles.bookVerse, {color:theme.color}]}
+                        style={[styles.bookVerse, { color: theme.color }]}
                     />
                 ) : (
                     // Android can do word selections just with <Text>
                     <FlatList
-                    data={verses}
-                    keyExtractor={(item, index) => index.toString()}
-                    renderItem={({ item }) => (
-                        <Text
-                            selectable
-                            selectionColor='blue'
-                            style={[styles.bookVerse, {color:theme.color}]}
-                        >
-                            {item.verse}. {item.text}
-                        </Text>
-                    )}
-                />
+                        data={verses}
+                        keyExtractor={(item, index) => index.toString()}
+                        renderItem={({ item }) => (
+                            <Text
+                                selectable={true}
+                                editable={false}
+                                multiline={true}
+                                selectionColor='grey'
+                                style={[styles.bookVerse, { color: theme.color }]}
+                            >
+                                {item.verse}. {item.text}
+                            </Text>
+                        )}
+                    />
+
                 )}
             </View>
         </SafeAreaView>
