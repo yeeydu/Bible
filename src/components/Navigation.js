@@ -22,6 +22,7 @@ export default function Navigation() {
         },
         headerTintColor: "#000",
         headerBackTitle: "Back",
+        headerTitleAlign: "center",
       }} >
       <Stack.Screen
         name="King James Bible"
