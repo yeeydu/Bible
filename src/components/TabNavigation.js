@@ -29,7 +29,7 @@ export default function TabNavigation({ navigation }) {
                         // You can return any component that you like here!
                         return <Ionicons name={iconName} size={size} color={color} />;
                     },
-                    tabBarActiveTintColor: '#cdcf0a',
+                    tabBarActiveTintColor: '#c3c407',
                     tabBarInactiveTintColor: 'gray',
                     tabBarStyle: { position: 'relative', marginBottom: 0 },
                     headerShown: false,
