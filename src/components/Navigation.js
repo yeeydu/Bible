@@ -8,6 +8,8 @@ import VerseScreen from './VerseScreen';
 import AboutScreen from './AboutScreen';
 import theme from '../theme/theme';
 import ThemeContext from '../theme/themeContext';
+import ResultSearchScreen from './ResultSearchScreen';
+import SearchScreen from './SearchScreen';
 
 export default function Navigation() {
 
@@ -44,9 +46,26 @@ export default function Navigation() {
         component={VerseScreen}
         options={({ route }) => ({ title: `${route.params.book} ${route.params.chapter}` })}
       />
+      <Stack.Screen
+        name="Search"
+        component={ResultSearchScreen}  options={{
+          tabBarButton: (props) => (
+            <CustomSearchBar {...props} onSubmit={(query) => props.navigation.navigate('Search', { query })} />
+          ),
+        }} />
     </Stack.Navigator>
   )
 }
+
+export const SearchingStack = () => {
+  const Stack = createStackNavigator();
+  return (
+    <Stack.Navigator>
+      <Stack.Screen name="Search" component={SearchScreen} />
+      <Stack.Screen name="ResultSearch" component={ResultSearchScreen} />
+    </Stack.Navigator>
+  );
+};
 
 const styles = StyleSheet.create({
   container: {

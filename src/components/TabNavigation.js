@@ -5,7 +5,9 @@ import AboutScreen from './AboutScreen';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import { StyleSheet } from 'react-native'
-import Navigation from './Navigation';
+import Navigation, { SearchingStack } from './Navigation';
+import SearchResultsScreen from './ResultSearchScreen';
+import CustomSearchBar from './SearchScreen';
 
 
 export default function TabNavigation({ navigation }) {
@@ -25,6 +27,10 @@ export default function TabNavigation({ navigation }) {
                             iconName = focused
                                 ? 'ios-information-circle'
                                 : 'ios-information-circle-outline';
+                        }else if (route.name === 'Search') {
+                            iconName = focused
+                                ? 'ios-search'
+                                : 'ios-search';
                         }
                         // You can return any component that you like here!
                         return <Ionicons name={iconName} size={size} color={color} />;
@@ -36,6 +42,7 @@ export default function TabNavigation({ navigation }) {
                 })}
         >
             <Tab.Screen name="Home" component={Navigation} />
+            <Tab.Screen name="Search" component={SearchingStack} />
             <Tab.Screen name="About" component={AboutScreen} />
         </Tab.Navigator>
     );
@@ -43,10 +50,10 @@ export default function TabNavigation({ navigation }) {
 
 const styles = StyleSheet.create({
     container: {
-      flex: 1,
-      marginLeft: 10,
-      margingRight: 10,
-      // alignItems: 'center',
-      justifyContent: 'center',
+        flex: 1,
+        marginLeft: 10,
+        margingRight: 10,
+        // alignItems: 'center',
+        justifyContent: 'center',
     }
-  });
+});
