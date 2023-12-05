@@ -22,6 +22,14 @@ const VerseScreen = ({ route }) => {
     //ItemSeparator = itemSeparator? ItemSeparator : null;
     const versesText = verses.map(item => `${item.verse}. ${item.text}`).join('\n\n');
 
+    const handleShare = (text) => {
+        Share.share({
+          message: text,
+        })
+          .then(result => console.log(result))
+          .catch(errorMsg => console.log(errorMsg));
+      };
+      
 
     return (
         <SafeAreaView>
@@ -35,6 +43,7 @@ const VerseScreen = ({ route }) => {
                         value={versesText}
                         editable={false}
                         multiline
+                        //onPress={() => handleShare(`${item.book_name} ${item.chapter}:${item.verse}. ${item.text}`)}
                         style={[styles.bookVerse, { color: theme.color }]}
                     />
                 ) : (
@@ -48,6 +57,7 @@ const VerseScreen = ({ route }) => {
                                 editable={false}
                                 multiline={true}
                                 selectionColor='grey'
+                                onPress={() => handleShare(`${item.book_name} ${item.chapter}:${item.verse}. ${item.text}`)}
                                 style={[styles.bookVerse, { color: theme.color }]}
                             >
                                 {item.verse}. {item.text}
