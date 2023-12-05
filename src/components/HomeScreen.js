@@ -22,17 +22,17 @@ export default function HomeScreen({ navigation }) {
     }, []);
 
     return (
-        <SafeAreaView style={[styles.container, {color:theme.color}, {backgroundColor:theme.backgroundColor}]}>
+        <SafeAreaView style={[styles.container, { color: theme.color }, { backgroundColor: theme.backgroundColor }]}>
             {/* <Image
                 source={require("../images/kj.jpg")}
                 style={styles.backgroundImage}
             /> */}
             <TouchableOpacity
                 onPress={() => navigation.navigate('Books', { book: books })}
-                style={[styles.button, {color:theme.color}]}>
+                style={[styles.button, { color: theme.color }]}>
                 <Text style={styles.bookVersion}>
                     KJV - King James Version Bible
-                </Text> 
+                </Text>
             </TouchableOpacity>
             <Switch
                 style={styles.switch}
@@ -41,10 +41,10 @@ export default function HomeScreen({ navigation }) {
                     setDarkMode(value);
                     EventRegister.emit('changeThemeEvent', value);
                 }} />
-            <Text style={[styles.darkModeText, {color:theme.color}]}>
-                Dark Mode 
+            <Text style={[styles.darkModeText, { color: theme.color }]}>
+                Dark Mode
             </Text>
-            <Text style={[styles.about, {color:theme.color}]} onPress={() => navigation.navigate('About')}>
+            <Text style={[styles.about, { color: theme.color }]} onPress={() => navigation.navigate('About')}>
                 About
             </Text>
         </SafeAreaView>

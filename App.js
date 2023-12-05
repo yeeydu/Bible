@@ -9,6 +9,7 @@ import theme from './src/theme/theme';
 import ThemeContext from './src/theme/themeContext';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Navigation from './src/components/Navigation';
+import TabNavigation from './src/components/TabNavigation';
 
 export default function App() {
 
@@ -29,6 +30,7 @@ export default function App() {
       <NavigationContainer theme={darkMode === true ? DarkTheme : DefaultTheme}>
         <StatusBar style="auto" />
         <Navigation />
+        {/* <TabNavigation /> */}
       </NavigationContainer>
     </ThemeContext.Provider>
   );
