@@ -11,6 +11,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Navigation from './src/components/Navigation';
 import TabNavigation from './src/components/TabNavigation';
 
+
 export default function App() {
 
   const [darkMode, setDarkMode] = useState(false);
@@ -28,9 +29,9 @@ export default function App() {
   return (
     <ThemeContext.Provider value={darkMode ? theme.dark : theme.light}>
       <NavigationContainer theme={darkMode === true ? DarkTheme : DefaultTheme}>
-        <StatusBar style="auto" />
-        <Navigation />
-        {/* <TabNavigation /> */}
+        <StatusBar style="auto"  backgroundColor="white"  />
+        {/* <Navigation /> */}
+        <TabNavigation />   
       </NavigationContainer>
     </ThemeContext.Provider>
   );

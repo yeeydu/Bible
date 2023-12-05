@@ -14,9 +14,18 @@ export default function Navigation() {
   const Stack = createStackNavigator();
 
   return (
-    <Stack.Navigator initialRouteName="Book" style={[styles.container, { color: theme.color }]}>
+    <Stack.Navigator initialRouteName="Home"
+      style={[styles.container, { color: theme.color }]}
+      screenOptions={{
+        headerStyle: {
+          backgroundColor: "tomato",
+          safeAreaInsets: { top: 0 }, // Set top safe area insets to 0
+        },
+        headerTintColor: "white",
+        headerBackTitle: "Back",
+      }} >
       <Stack.Screen
-        name="King James Version Bible"
+        name="King James Bible"
         component={HomeScreen} />
       <Stack.Screen
         name="About"

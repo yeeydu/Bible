@@ -31,7 +31,7 @@ export default function HomeScreen({ navigation }) {
                 onPress={() => navigation.navigate('Books', { book: books })}
                 style={[styles.button, { color: theme.color }]}>
                 <Text style={styles.bookVersion}>
-                    KJV - King James Version Bible
+                    KJV - King James Bible
                 </Text>
             </TouchableOpacity>
             <Switch
@@ -44,9 +44,9 @@ export default function HomeScreen({ navigation }) {
             <Text style={[styles.darkModeText, { color: theme.color }]}>
                 Dark Mode
             </Text>
-            <Text style={[styles.about, { color: theme.color }]} onPress={() => navigation.navigate('About')}>
+            {/* <Text style={[styles.about, { color: theme.color }]} onPress={() => navigation.navigate('About')}>
                 About
-            </Text>
+            </Text> */}
         </SafeAreaView>
     );
 };
@@ -74,7 +74,7 @@ const styles = StyleSheet.create({
     button: {
         alignSelf: "center",
         padding: 8,
-        width: 330,
+        width: 300,
         borderColor: '#eee',
         shadowColor: '#000',
         shadowOffset: { width: 1, height: 2 },
