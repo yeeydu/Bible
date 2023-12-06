@@ -15,16 +15,23 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.mediaextra.KJVBible"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.mediaextra.KJVBible"
     },
     "web": {
       "favicon": "./assets/favicon.png"
     }
-  }
+  },
+    "react-native-google-mobile-ads":
+      {
+        "android_app_id": "ca-app-pub-9193627783332519~7262351262",
+        "ios_app_id": ""
+      }
 }
