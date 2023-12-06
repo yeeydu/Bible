@@ -20,7 +20,7 @@ export default function Navigation() {
       style={[styles.container, { color: theme.color }]}
       screenOptions={{
         headerStyle: {
-          backgroundColor: "#e8e77a",
+          backgroundColor: "#e8e77a", //Set Header color
         },
         headerTintColor: "#000",
         headerBackTitle: "Back",

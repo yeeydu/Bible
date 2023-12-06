@@ -35,7 +35,7 @@ export default function TabNavigation({ navigation }) {
                         // You can return any component that you like here!
                         return <Ionicons name={iconName} size={size} color={color} />;
                     },
-                    tabBarActiveTintColor: '#e3be07',
+                    tabBarActiveTintColor: '#e3be07', // change color of active tab
                     tabBarInactiveTintColor: 'gray',
                     tabBarStyle: { position: 'relative', marginBottom: 0 },
                     headerShown: false,
