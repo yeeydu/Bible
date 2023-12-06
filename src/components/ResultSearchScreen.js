@@ -1,5 +1,5 @@
 import React, { useEffect, useContext } from 'react';
-import { View, Text, StyleSheet, FlatList, TextInput } from 'react-native';
+import { View, Text, StyleSheet, FlatList, TextInput, Share } from 'react-native';
 import kjv from '../../data/kjv.json';
 import ThemeContext from '../theme/themeContext';
 import ItemSeparator from './ItemSeparator';
@@ -10,6 +10,14 @@ const ResultSearchScreen = ({ route }) => {
 
     const verseResults = kjv.filter((item) => item.text.toLowerCase().includes(query.toLowerCase()));
     const versesText = verseResults.map(item => `${item.book_name} ${item.chapter}:${item.verse} - ${item.text}`).join('\n\n');
+
+    const handleShare = (text) => {
+        Share.share({
+          message: text,
+        })
+          .then(result => console.log(result))
+          .catch(errorMsg => console.log(errorMsg));
+      };
 
     return (
         <View style={styles.container}>
@@ -38,6 +46,7 @@ const ResultSearchScreen = ({ route }) => {
                                 multiline={true}
                                 selectionColor='grey'
                                 style={[styles.bookVerse, { color: theme.color }]}
+                                onPress={() => handleShare(`${item.book_name} ${item.chapter}:${item.verse}. ${item.text}`)}
                             >
                                 {item.book_name} {item.chapter}:{item.verse} - {item.text}
                             </Text>
