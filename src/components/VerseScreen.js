@@ -51,12 +51,12 @@ const VerseScreen = ({ route }) => {
                     <FlatList
                         data={verses}
                         keyExtractor={(item, index) => index.toString()}
+                        ItemSeparatorComponent={ItemSeparator}
                         renderItem={({ item }) => (
                             <Text
                                 selectable={true}
                                 editable={false}
                                 multiline={true}
-                                ItemSeparatorComponent={ItemSeparator}
                                 selectionColor='grey'
                                 onPress={() => handleShare(`${item.book_name} ${item.chapter}:${item.verse}. ${item.text}`)}
                                 style={[styles.bookVerse, { color: theme.color }]}
