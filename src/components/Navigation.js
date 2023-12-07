@@ -46,13 +46,13 @@ export default function Navigation() {
         component={VerseScreen}
         options={({ route }) => ({ title: `${route.params.book} ${route.params.chapter}` })}
       />
-      <Stack.Screen
-        name="Search"
+      {/* <Stack.Screen
+        name="ScreenSearch"
         component={ResultSearchScreen}  options={{
           tabBarButton: (props) => (
             <CustomSearchBar {...props} onSubmit={(query) => props.navigation.navigate('Search', { query })} />
           ),
-        }} />
+        }} /> */}
     </Stack.Navigator>
   )
 }
@@ -62,7 +62,7 @@ export const SearchingStack = () => {
   return (
     <Stack.Navigator>
       <Stack.Screen name="Search" component={SearchScreen} />
-      <Stack.Screen name="ResultSearch" component={ResultSearchScreen} />
+      <Stack.Screen name="Result" component={ResultSearchScreen} />
     </Stack.Navigator>
   );
 };

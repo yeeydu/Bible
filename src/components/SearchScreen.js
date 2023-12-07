@@ -1,18 +1,33 @@
-import React, { useState , useContext} from 'react';
+import React, { useState, useContext } from 'react';
 import { View, Button, TextInput, Text, StyleSheet } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import {  TouchableOpacity } from 'react-native-gesture-handler';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 import ThemeContext from '../theme/themeContext';
 import theme from '../theme/theme';
 
 const SearchScreen = () => {
   const [query, setQuery] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
+
   const navigation = useNavigation();
   const theme = useContext(ThemeContext);
 
   const handleSearch = () => {
     // Navigate to the SearchResultsScreen with the query parameter
-    navigation.navigate('ResultSearch', { query });
+    if (query === '') {
+      setErrorMessage('Please enter a search query.');
+      return;
+    } else {
+      navigation.navigate('Result', { query });
+      setErrorMessage('');
+    }
+  };
+
+  const handleChange = (text) => {
+    // Clear the error message when the user starts typing
+    setErrorMessage('');
+    // Update the query
+    setQuery(text);
   };
 
   return (
@@ -21,15 +36,16 @@ const SearchScreen = () => {
         placeholder="Your search..."
         value={query}
         style={[styles.input, { color: theme.color }]}
-        onChangeText={(text) => setQuery(text)}
+        onChangeText={handleChange}
       />
+      <Text style={styles.errorMessage}>{errorMessage}</Text>
       <TouchableOpacity
-                onPress={handleSearch}
-                style={[styles.button, { color: theme.color }]}>
-                <Text style={styles.searchText}>
-                    Search
-                </Text>
-            </TouchableOpacity>
+        onPress={handleSearch}
+        style={[styles.button, { color: theme.color }]}>
+        <Text style={styles.searchText}>
+          Search
+        </Text>
+      </TouchableOpacity>
     </View>
   );
 };
@@ -63,14 +79,19 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     fontWeight: 'bold',
     textAlign: 'center',
-},
-input:{
-  height: 40,
-  margin: 12,
-  borderWidth: 0.5,
-  borderRadius: 8,
-  padding: 10,
-  backgroundColor: 'rgba(232, 231, 122, 0.3)',
-}
+  },
+  input: {
+    height: 40,
+    margin: 12,
+    borderWidth: 0.5,
+    borderRadius: 8,
+    padding: 10,
+    backgroundColor: 'rgba(232, 231, 122, 0.3)',
+  },
+  errorMessage: {
+    color: 'red',
+    fontSize: 12,
+    textAlign: 'center',
+  },
 
 });
