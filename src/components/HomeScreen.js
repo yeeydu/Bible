@@ -9,7 +9,7 @@ import { Switch, TouchableOpacity } from 'react-native-gesture-handler';
 import { EventRegister } from 'react-native-event-listeners'
 import ThemeContext from '../theme/themeContext';
 import theme from '../theme/theme';
-//import { BannerAd, BannerAdSize, TestIds } from 'react-native-google-mobile-ads';
+import Banner from '../ads/banner/Banner';
 
 
 export default function HomeScreen({ navigation }) {
@@ -23,8 +23,6 @@ export default function HomeScreen({ navigation }) {
         setBooks(allBooks);
     }, []);
 
-    //const adUnitId = __DEV__ ? TestIds.ADAPTIVE_BANNER 'ca-app-pub-9193627783332519~7262351262';
-    //const adUnitId = __DEV__ ? TestIds.ADAPTIVE_BANNER  : 'ca-app-pub-3940256099942544/6300978111';
 
 
     return (
@@ -32,10 +30,6 @@ export default function HomeScreen({ navigation }) {
             {/* <Image
                 source={require("../images/kj.jpg")}
                 style={styles.backgroundImage}
-            /> */}
-            {/* <BannerAd
-                unitId={adUnitId}
-                size={BannerAdSize.ANCHORED_ADAPTIVE_BANNER}
             /> */}
             <TouchableOpacity
                 onPress={() => navigation.navigate('Books', { book: books })}
@@ -57,6 +51,7 @@ export default function HomeScreen({ navigation }) {
             {/* <Text style={[styles.about, { color: theme.color }]} onPress={() => navigation.navigate('About')}>
                 About
             </Text> */}
+            <Banner />
         </SafeAreaView>
     );
 };
