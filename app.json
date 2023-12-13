@@ -1,14 +1,13 @@
 {
   "expo": {
     "name": "Bible",
-    "slug": "Bible",
+    "slug": "KJVBible",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/logo.png",
-      "resizeMode": "center",
       "backgroundColor": "#ffffff"
     },
     "assetBundlePatterns": [
@@ -16,22 +15,28 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.mediaextra.KJVBible"
+      "bundleIdentifier": "com.mediaextra.Bible"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.mediaextra.KJVBible"
+      "package": "com.mediaextra.Bible"
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
-  },
-    "react-native-google-mobile-ads":
-      {
-        "android_app_id": "ca-app-pub-9193627783332519~7262351262",
-        "ios_app_id": ""
+    },
+    "extra": {
+      "eas": {
+        "projectId": "f7e26090-c5b1-4f41-a4b1-64faf3a1782e"
       }
+    },
+    "plugins": [
+      "expo-build-properties"
+    ]
+  },
+  "react-native-google-mobile-ads": {
+    "android_app_id": "ca-app-pub-9193627783332519~7262351262"
+  }
 }
