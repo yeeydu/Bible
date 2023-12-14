@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "Bible",
-    "slug": "KJVBible",
+    "slug": "kjvbible",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -29,12 +29,13 @@
     },
     "extra": {
       "eas": {
-        "projectId": "f7e26090-c5b1-4f41-a4b1-64faf3a1782e"
+        "projectId": "28b27e57-a5f2-414f-8236-fedb22919e5d"
       }
     },
     "plugins": [
       "expo-build-properties"
-    ]
+    ],
+    "owner": "yeeysonexpo"
   },
   "react-native-google-mobile-ads": {
     "android_app_id": "ca-app-pub-9193627783332519~7262351262"
