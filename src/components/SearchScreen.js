@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react';
-import { View, Button, TextInput, Text, StyleSheet } from 'react-native';
+import { View, Button, TextInput, Text, StyleSheet, SafeAreaView } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import ThemeContext from '../theme/themeContext';
@@ -31,7 +31,7 @@ const SearchScreen = () => {
   };
 
   return (
-    <View style={[styles.container, { color: theme.color }]}>
+    <SafeAreaView style={[styles.container, { color: theme.color }, { backgroundColor: theme.backgroundColor }]}>
       <TextInput
         placeholder="Your search..."
         value={query}
@@ -46,7 +46,7 @@ const SearchScreen = () => {
           Search
         </Text>
       </TouchableOpacity>
-    </View>
+    </SafeAreaView>
   );
 };
 
@@ -56,9 +56,9 @@ export default SearchScreen;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginLeft: 10,
-    margingRight: 10,
-    marginTop: 10,
+    paddingLeft: 10,
+    paddingRight: 10,
+    paddingTop: 10,
   },
   button: {
     alignSelf: "center",

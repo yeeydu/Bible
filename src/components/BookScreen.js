@@ -21,7 +21,7 @@ export default function BookScreen({ navigation }) {
     }, []);
 
     return (
-        <SafeAreaView>
+        <SafeAreaView style={[ { color: theme.color }, { backgroundColor: theme.backgroundColor }]}>
             <FlatList
                 data={books}
                 ListEmptyComponent={ListEmpty}

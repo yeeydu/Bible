@@ -19,7 +19,7 @@ const ChapterScreen = ({ route, navigation }) => {
 
 
   return (
-    <SafeAreaView>
+    <SafeAreaView style={[ { color: theme.color }, { backgroundColor: theme.backgroundColor }]}>
       {/* <Text style={styles.bookTitle}>{book}</Text> */}
       <FlatList
         data={chapters}

@@ -32,7 +32,7 @@ const VerseScreen = ({ route }) => {
       
 
     return (
-        <SafeAreaView>
+        <SafeAreaView style={[ { color: theme.color }, { backgroundColor: theme.backgroundColor }]}>
             <Text style={styles.bookTitle}>{book} {chapter} </Text>
             <View style={styles.container}>
                 {Platform.OS === 'ios' ? (

@@ -10,7 +10,7 @@ export default function AboutScreen() {
 
 
   return (
-    <View style={[styles.container, { color: theme.color }]}>
+    <View style={[styles.container, { color: theme.color }, { backgroundColor: theme.backgroundColor }]}>
       <Text style={[styles.text, { color: theme.color }]}>The King James Version (KJV), also the King James Bible (KJB) and the Authorized Version (AV) is an Early Modern English translation of the Christian Bible for the Church of England, which was commissioned in 1604 and published in 1611, by sponsorship of King James VI and I.
       </Text>
       <Text style={[styles.text, { color: theme.color }]}>
