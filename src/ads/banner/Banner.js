@@ -1,6 +1,6 @@
 import { View, Text, Platform } from 'react-native'
 import React from 'react'
-import { BannerAd, BannerAdSize, TestIds } from 'react-native-google-mobile-ads';
+//import { BannerAd, BannerAdSize, TestIds } from 'react-native-google-mobile-ads';
 
 
 export default function Banner() {
@@ -10,7 +10,7 @@ export default function Banner() {
 
     return (
         <View>
-            <BannerAd
+            {/* <BannerAd
                 unitId={
                     Platform.OS === 'ios' ? 'ca-app-pub-3940256099942544/6300978111' : 'ca-app-pub-3940256099942544/6300978111'
                 }
@@ -18,7 +18,7 @@ export default function Banner() {
                 requestOptions={{
                     requestNonPersonalizedAdsOnly: true,
                 }}
-            />
+            /> */}
         </View>
     )
 }
