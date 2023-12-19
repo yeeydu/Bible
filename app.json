@@ -14,8 +14,7 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true,
-      "bundleIdentifier": "com.mediaextra.Bible"
+      "supportsTablet": true
     },
     "android": {
       "adaptiveIcon": {
@@ -31,11 +30,7 @@
       "eas": {
         "projectId": "28b27e57-a5f2-414f-8236-fedb22919e5d"
       }
-    },
-    "plugins": [
-      "expo-build-properties"
-    ],
-    "owner": "yeeysonexpo"
+    }
   },
   "react-native-google-mobile-ads": {
     "android_app_id": "ca-app-pub-9193627783332519~7262351262"

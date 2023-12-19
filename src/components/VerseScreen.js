@@ -3,7 +3,6 @@ import { SafeAreaView, Text, TextInput, StatusBar, FlatList, StyleSheet, View, S
 import kjv from '../../data/kjv.json';
 import ListEmpty from './ListEmpy';
 import ItemSeparator from './ItemSeparator';
-import SelectableText from '@alentoma/react-native-selectable-text';
 import ThemeContext from '../theme/themeContext';
 
 

@@ -1,6 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
 import { FlatList, StyleSheet, Text, View } from 'react-native';
-import kjv from './data/kjv.json';
 import { SafeAreaView } from 'react-native';
 import { DarkTheme, DefaultTheme, NavigationContainer } from '@react-navigation/native';
 import { EventRegister } from 'react-native-event-listeners'
