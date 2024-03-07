@@ -30,14 +30,10 @@ export default function AboutScreen() {
       <Text style={[styles.subColaborate, styles.link,]} onPress={() => Linking.openURL('https://buymeacoffee.com/extramedia19')}>
         👉 By a Coffee
       </Text >
-      <TouchableOpacity onPress={() => Linking.openURL('https://www.paypal.com/donate/?hosted_button_id=T9T42YNB9QJ2A')}>
+      <TouchableOpacity onPress={() => Linking.openURL('#')}>
         <Text style={[styles.subColaborate, styles.link,]}>
           👉 Donate
         </Text>
-        <Image
-          source={require("../images/donates.png")}
-          style={styles.donateImage}
-        />
       </TouchableOpacity>
       {/* <Text style={[styles.subColaborate, styles.link,]} onPress={() => Linking.openURL('https://www.paypal.com/donate/?hosted_button_id=T9T42YNB9QJ2A')}>
         👉Donate
