@@ -1,9 +1,13 @@
 ### <div align="center">A simple Bible app created with react native.</div>  
   
 
-- ❓ A King James Version Bible app created with a json data to display books, chapters and verses. It also has a dark mode, navigation, routes and sharing.  
+- ❓ A King James Version Bible app created with a json data to display books, chapters and verses. It also has a dark mode and searching functionality
+- Expo
+- Async-storage
+- React-navigation/native
+- React-native
+- React Router
   
-
 - ⚡ Fun fact: I use simple javascript files and syntax  
   
 
