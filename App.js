@@ -10,7 +10,6 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Navigation from './src/components/Navigation';
 import TabNavigation from './src/components/TabNavigation';
 //import 'expo-dev-client'
-//import mobileAds from 'react-native-google-mobile-ads';
 
 
 export default function App() {
@@ -26,11 +25,6 @@ export default function App() {
     }
   }, [darkMode]);
 
-  // mobileAds()
-  // .initialize()
-  // .then(adapterStatuses => {
-  //   // Initialization complete!
-  // });
 
   // theme context must get values from theme.js
   return (

@@ -9,7 +9,6 @@ import { Switch, TouchableOpacity } from 'react-native-gesture-handler';
 import { EventRegister } from 'react-native-event-listeners'
 import ThemeContext from '../theme/themeContext';
 import theme from '../theme/theme';
-import Banner from '../ads/banner/Banner';
 
 
 export default function HomeScreen({ navigation }) {
@@ -51,7 +50,6 @@ export default function HomeScreen({ navigation }) {
             {/* <Text style={[styles.about, { color: theme.color }]} onPress={() => navigation.navigate('About')}>
                 About
             </Text> */}
-            <Banner />
         </SafeAreaView>
     );
 };
