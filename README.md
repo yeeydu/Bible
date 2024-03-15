@@ -9,7 +9,8 @@
 - React Router
   
 - ⚡ Fun fact: I use simple javascript files and syntax  
-  
+
+  ## You found this code useful please give it a ☆ STAR 
 
 <br/>  
 
