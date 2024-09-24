@@ -22,15 +22,15 @@ export default function TabNavigation({ navigation }) {
                     tabBarIcon: ({ focused, color, size }) => {
                         let iconName;
                         if (route.name === 'Home') {
-                            iconName = focused ? 'ios-list' : 'ios-list-outline';
+                            iconName = focused ? 'list' : 'list-outline';
                         } else if (route.name === 'About') {
                             iconName = focused
-                                ? 'ios-information-circle'
-                                : 'ios-information-circle-outline';
-                        }else if (route.name === 'Search') {
+                                ? 'information-circle-outline'
+                                : 'information-circle-outline';
+                        } else if (route.name === 'Search') {
                             iconName = focused
-                                ? 'ios-search'
-                                : 'ios-search';
+                                ? 'search-outline'
+                                : 'search-outline';
                         }
                         // You can return any component that you like here!
                         return <Ionicons name={iconName} size={size} color={color} />;
